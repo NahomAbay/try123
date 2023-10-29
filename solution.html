@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TinDog</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/solution.css">
+</head>
+
+<body>
+  <!-- Title -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="data:image/png;base64,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"  height="30"> UNT</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home Teaching</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Position Openings</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Research
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Products
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Enter search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">ME@UNT</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <section id="title" class="gradient-background">
+
+
+    <div class="container col-xxl-8 px-4 pt-5">
+      <div class="row flex-lg-row-reverse align-items-center g-5 pt-5">
+        <div class="col-8 col-sm-6 col-lg-4">
+          <img src="https://s3-us-west-2.amazonaws.com/courses-images-archive-read-only/wp-content/uploads/sites/222/2014/12/20104729/Figure_15_07_04a.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" height="10"
+        >
+        </div>
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Nanoscale Energy Transport Group
+
+ 
+
+            (NET@UNT)</h1>
+          <h2>Heat Transfer Research and Education
+
+            Department of Mechanical Engineering
+            
+            University of North Texas
+            
+            Denton, Texas, USA</h2> 
+          </div>
+      </div>
+    </div>
+  </section>
+  <!-- Features -->
+  <section id="features">
+    <div class="container mt-5">
+      <h1>About us:</h1>
+      <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+        <div class="col d-flex align-items-start">
+          <div
+            class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+            <svg xmlns="http://www.w3.org/2000/svg" height="30" fill="currentColor" class="bi bi-check2-circle"
+              viewBox="0 0 16 16">
+              <path
+                d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z" />
+              <path
+                d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z" />
+            </svg>
+          </div>
+          <div>
+          
+            <p>Heat transfer research for aerospace, renewable energy, and engineering fundamentals
+
+            </p>
+
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <div
+            class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+            <svg xmlns="http://www.w3.org/2000/svg" height="30" fill="currentColor" class="bi bi-mortarboard"
+              viewBox="0 0 16 16">
+              <path
+                d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917l-7.5-3.5ZM8 8.46 1.758 5.965 8 3.052l6.242 2.913L8 8.46Z" />
+              <path
+                d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466 4.176 9.032Zm-.068 1.873.22-.748 3.496 1.311a.5.5 0 0 0 .352 0l3.496-1.311.22.748L8 12.46l-3.892-1.556Z" />
+            </svg>
+          </div>
+          <div>
+            
+            <p>We are a team based in Dallas-Fort Worth applying heat transfer and thermodynamics principles to engineer nano/microscale coatings and devices for compact electronics and environmental systems.</p>
+
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <div
+            class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+            <svg xmlns="http://www.w3.org/2000/svg" height="30" fill="currentColor" class="bi bi-arrow-through-heart"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M2.854 15.854A.5.5 0 0 1 2 15.5V14H.5a.5.5 0 0 1-.354-.854l1.5-1.5A.5.5 0 0 1 2 11.5h1.793l.53-.53c-.771-.802-1.328-1.58-1.704-2.32-.798-1.575-.775-2.996-.213-4.092C3.426 2.565 6.18 1.809 8 3.233c1.25-.98 2.944-.928 4.212-.152L13.292 2 12.147.854A.5.5 0 0 1 12.5 0h3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.854.354L14 2.707l-1.006 1.006c.236.248.44.531.6.845.562 1.096.585 2.517-.213 4.092-.793 1.563-2.395 3.288-5.105 5.08L8 13.912l-.276-.182a21.86 21.86 0 0 1-2.685-2.062l-.539.54V14a.5.5 0 0 1-.146.354l-1.5 1.5Zm2.893-4.894A20.419 20.419 0 0 0 8 12.71c2.456-1.666 3.827-3.207 4.489-4.512.679-1.34.607-2.42.215-3.185-.817-1.595-3.087-2.054-4.346-.761L8 4.62l-.358-.368c-1.259-1.293-3.53-.834-4.346.761-.392.766-.464 1.845.215 3.185.323.636.815 1.33 1.519 2.065l1.866-1.867a.5.5 0 1 1 .708.708L5.747 10.96Z" />
+            </svg>
+          </div>
+          <div>
+            
+            <p>We are hiring a postdoctoral researcher!
+
+              We are hiring funded graduate research students!</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Testimonial -->
+  <section id="testimonial">
+    <div class="my-5">
+      <div class="p-5 text-center bg-body-tertiary">
+        <div class="container py-5">
+          <h2 class="text-body-emphasis">NEWS</h2>
+          <h3>Good News Everyone!</h3>
+          <img class="profile-img mt-5" src="https://mechanical.engineering.unt.edu/sites/default/files/styles/portrait_150x200/public/banner/zhang-richard.jpg?itok=fssq4WLS" alt="dog image">
+          <p class="col-lg-8 mx-auto lead mt-2">
+            Dr. Zhang, Denton
+          </p>
+        </div>
+
+         
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <section id="contact" class="gradient-background">
+    <div class="container ">
+ 
+      <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 mt-5 border-top">
+        <div class="col mb-3">
+
+          <p class="text-body-secondary">© UNT</p>
+        </div>
+
+        <div class="col mb-3">
+
+        </div>
+
+        <div class="col mb-3">
+          <h5>Address</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Department of Mechanical Engineering
+
+              Discovery Park</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">3940 North Elm Street
+
+              Suite F115V
+              
+              Denton, TX 76207</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Phone: (940) 565-2742</a></li>
+
+          </ul>
+               
+        
+      </footer>
+    </div>
+  </section>
+</body>
+
+</html>
